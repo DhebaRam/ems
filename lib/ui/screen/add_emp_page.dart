@@ -100,6 +100,7 @@ class _AddEmpPageState extends State<AddEmpPage> {
                 controller: _nameController,
                 validationMessage: 'Please Enter Employee',
                 isName: true,
+                maxLength: 50,
                 floatingLabelBehavior: FloatingLabelBehavior.always,
                 textCapitalization: TextCapitalization.words,
                 prefixIcon: Padding(
