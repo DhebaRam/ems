@@ -146,20 +146,19 @@ class _AddEmpPageState extends State<AddEmpPage> {
                             // Add padding for small margin around
                             child: CalendarDialog(
                               isToday: true,
-                              // lastDay: _noDateController.text.trim().isNotEmpty
-                              //     ? DateFormat(outFormat)
-                              //         .parse(_noDateController.text.trim())
-                              //     : DateTime.now(),
+                              lastDay: _noDateController.text.trim().isNotEmpty
+                                  ? DateFormat(outFormat)
+                                      .parse(_noDateController.text.trim())
+                                  : null,
                               initialFocusedDay: _todayController.text
                                       .trim()
                                       .isNotEmpty
                                   ? DateFormat(outFormat)
                                       .parse(_todayController.text.trim())
-                                  : /*_noDateController.text.trim().isNotEmpty
+                                  : _noDateController.text.trim().isNotEmpty
                                       ? DateFormat(outFormat)
                                           .parse(_noDateController.text.trim())
-                                      :*/
-                                  DateTime.now(),
+                                      : DateTime.now(),
                               onDaySelected: (selectedDay) {
                                 // Handle the selected day here
 
@@ -210,15 +209,19 @@ class _AddEmpPageState extends State<AddEmpPage> {
                                 const EdgeInsets.symmetric(horizontal: 10),
                             // Add padding for small margin around
                             child: CalendarDialog(
-                              // firstDay: _todayController.text.trim().isNotEmpty
-                              //     ? DateFormat(outFormat)
-                              //         .parse(_todayController.text.trim())
-                              //     : null,
-                              // lastDay: DateTime.now(),
-                              initialFocusedDay:
-                                  _noDateController.text.trim().isNotEmpty
+                              firstDay: _todayController.text.trim().isNotEmpty
+                                  ? DateFormat(outFormat)
+                                      .parse(_todayController.text.trim())
+                                  : null,
+                              lastDay: null,
+                              initialFocusedDay: _noDateController.text
+                                      .trim()
+                                      .isNotEmpty
+                                  ? DateFormat(outFormat)
+                                      .parse(_noDateController.text.trim())
+                                  : _todayController.text.trim().isNotEmpty
                                       ? DateFormat(outFormat)
-                                          .parse(_noDateController.text.trim())
+                                          .parse(_todayController.text.trim())
                                       : DateTime.now(),
                               onDaySelected: (selectedDay) {
                                 // Handle the selected day here

@@ -282,7 +282,7 @@ class BaseTextField extends StatelessWidget {
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                    color: borderColor ?? BaseColors.borderColor, width: 1.5),
+                    color: borderColor ?? BaseColors.primaryColor, width: 1.5),
                 borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
               ),
               disabledBorder: OutlineInputBorder(
